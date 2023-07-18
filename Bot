@@ -1,0 +1,15 @@
+   import telebot
+
+
+   TOKEN = 6063108090:AAGMX3waXKLNKOFNswn3AOmxkoiEgcx2ZMg
+
+
+   bot = telebot.Telebot(TOKEN)
+
+
+   @bot.massage_handler()
+   def echo_test(massage: telebot.types.Massage):
+       bot.send_massage(massage.chat.id, "hello")
+
+
+   bot.polling()
